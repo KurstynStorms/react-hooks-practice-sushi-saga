@@ -1,4 +1,5 @@
 import React from "react";
+import SushiWallet from "./SushiWallet"
 
 function Table({ wallet, onAddMoney, plates = [] }) {
   // renders an empty plate for every element in the array
@@ -9,10 +10,11 @@ function Table({ wallet, onAddMoney, plates = [] }) {
   return (
     <>
       <h1 className="remaining">
-        You have: ${/* Give me how much money I have left */} remaining!
+        You have: ${wallet} remaining!
       </h1>
       <div className="table">
         <div className="stack">{emptyPlates}</div>
+        <SushiWallet onAddMoney={onAddMoney}/>
       </div>
     </>
   );
